@@ -214,3 +214,157 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
 }
+/* ============================= */
+/* MOBILE RESPONSIVE DESIGN */
+/* ============================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    padding: 20px 10px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    margin: 0 8px;
+    font-size: 18px;
+}
+
+/* Registration form */
+form {
+    width: 92%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Registration image */
+form img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto 20px auto;
+}
+
+/* Headings */
+form h2 {
+    font-size: 26px;
+    text-align: center;
+}
+
+/* Normal inputs */
+input,
+select,
+textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Education table */
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding: 8px 4px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Inputs inside education table */
+table input {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 5px;
+    font-size: 14px;
+}
+
+/* Content/Home/About cards */
+.home-content,
+.about-content,
+.content {
+    width: 92%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Images inside cards */
+.home-content img,
+.about-content img,
+.content img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+
+/* ============================= */
+/* VERY SMALL MOBILE SCREENS */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav a {
+        font-size: 17px;
+        margin: 0 5px;
+    }
+
+    form {
+        width: 94%;
+        padding: 15px;
+    }
+
+    form h2 {
+        font-size: 24px;
+    }
+
+    th,
+    td {
+        font-size: 14px;
+        padding: 6px 3px;
+    }
+
+    table input {
+        font-size: 13px;
+        padding: 9px 4px;
+    }
+
+    .home-content,
+    .about-content,
+    .content {
+        width: 94%;
+        padding: 15px;
+    }
+}
