@@ -1,32 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="./style.css">
+<meta charset="UTF-8">
+<meta name = "viewport"
+content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href = "./style.css">
+<title> Stackly Registration Form </title>
     </head>
     <body>
-        <header>
-            <h1>HOME</h1>
-        </header>
-        <section class="home-content">
-        <img src="./images/Stackly Student Registration.png" width = "500" class = "home-image">
-        <h2>Why Choose Stackly?</h2><BR><BR>
-        <p>
-<h3>Easy Registration</h3><br>
-<p>Create your profile through a simple and user-friendly registration process.</p><br>
+<header>
+    <h1>STACKLY</h1>
+    
+    <nav>
+        <a href = "./home.html">Home</a>
+        <a href = "./about.html">About</a>
+        <a href = "./content.html">Content</a>
+    </nav>
+    </header>   
+    <form>
+        <img src="./images/Student Registration.png" width = 200 alt = "Student Registration logo">
+        <h2> Student Registration</h2>
+        <label>First Name</label>
+        <br>
+        <input type = "text" name = "first name" placeholder = "Enter Your First Name " required>
+        <br><br>
+        <label>Last Name</label>
+        <br>
+        <input type = "text" name = "last name" placeholder="Enter Your Last Name" required>
+        <br><br>
+        <label>Email Id</label>
+        <br>
+        <input type = "email" name = "EmailId " placeholder="Enter Your Email Id" required>
+        <br><br>
+        <label>Age</label>
+        <br>
+        <input type = "number" name = "Age" placeholder="Age" min="18" max="60" required>
+        <br><br>
+        <label>Gender</label>
+        <br>
+        <input type = "radio" name = "gender" value = "Male">
+        <label>Male</label>
+        <br>
+        <input type = "radio" name = "gender" value = "Female">
+        <label>Female</label>
+        <br>
+        <input type = "radio" name = "gender" value = "Undefined">
+        <label>Undefined</label>
+        <br><br>
+        
+         <section class = "content">
+        <h2> Education Details </h2>
+        <table border="1">
+            <tr>
+                <th>Degree</th>
+                <th>College</th>
+                <th>Duration</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type = "text" placeholder="Enter Your Degree" required>
+                </td>
+                <td>
+                   <input type = "text" placeholder="Enter Your University/College" required>          
 
-<h3>Skill Development</h3><br>
-<p>Improve your technical and professional skills through learning resources and assessments.</p><br>
+                </td>
+                <td>
+                    <input type = "text" placeholder="Enter Your Duration" required>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <input type = "text" placeholder="Enter Your Board" required>
+                </td>
+                <td>
+                   <input type = "text" placeholder="Enter Your College" required>              
 
-<h3>Career Opportunities</h3><br>
-<p>Explore internships, job opportunities, and career-related programs.</p><br>
+                </td>
+                <td>
+                    <input type = "text" placeholder="Enter Your Duration" required>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <input type = "text" placeholder="Enter Your Board" required>
+                </td>
+                <td>
+                   <input type = "text" placeholder="Enter Your School" required>               
 
-<h3>Industry Connection</h3><br>
-<p>Connect your skills and learning journey with opportunities from companies and organizations.</p><br>
-
-<h3>Career Guidance</h3><br>
-<p>Get access to resources that can help you understand and plan your career path.</p><br>
-        </p>
-         
+                </td>
+                <td>
+                    <input type = "text" placeholder="Enter Your Duration" required>
+                </td>
+            </tr>
+        </table>
+        <p>Please fill in the details below to register </p>
+        
+    </section>
+    <input type = "submit" value = "Register">
+    </form>
+    <footer>
+        <p>© 2026 STACKLY</p>
+    </footer>
     </body>
 </html>
-</section>
