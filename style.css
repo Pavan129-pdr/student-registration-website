@@ -367,4 +367,267 @@ table input {
         width: 94%;
         padding: 15px;
     }
+}/* ========================= */
+/* PROMOTIONAL BANNER */
+/* ========================= */
+
+.promo-banner {
+    width: 100%;
+    min-height: 230px;
+
+    background: linear-gradient(
+        120deg,
+        #5146e5,
+        #7b3ff2,
+        #9b3df5
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 35px 20px;
+    margin: 0 0 30px 0;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Decorative circle */
+
+.promo-banner::before {
+    content: "";
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border: 2px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+
+    left: 5%;
+    top: 20px;
+}
+
+
+/* Another decorative circle */
+
+.promo-banner::after {
+    content: "";
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    background-color: rgba(255,255,255,0.12);
+    border-radius: 50%;
+
+    right: 5%;
+    top: 40px;
+}
+
+
+/* Banner content */
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+}
+
+
+/* Small heading */
+
+.promo-small {
+    font-size: 17px;
+    font-weight: bold;
+
+    margin: 0 0 10px 0;
+}
+
+
+/* Main heading */
+
+.promo-content h2 {
+    font-size: 34px;
+
+    margin: 5px 0 10px 0;
+
+    color: white;
+}
+
+
+/* Description */
+
+.promo-text {
+    font-size: 18px;
+
+    margin: 0 0 20px 0;
+
+    color: white;
+}
+
+
+/* Register button */
+
+.shop-btn {
+    display: inline-block;
+
+    background-color: white;
+    color: #6941e8;
+
+    padding: 12px 28px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Arrow */
+
+.shop-btn span {
+    display: inline-block;
+
+    margin-left: 8px;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Mouse hover */
+
+.shop-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+/* Arrow moves */
+
+.shop-btn:hover span {
+    transform: translateX(6px);
+}
+/* ========================= */
+/* SERVICES SECTION */
+/* ========================= */
+
+.services-section {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+}
+
+
+/* Services heading */
+
+.services-section h2 {
+    color: #294C68;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Introduction text */
+
+.services-intro {
+    color: #333;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+/* Cards container */
+
+.services-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Individual card */
+
+.service-card {
+    background-color: #f8fffc;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #dcefe7;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Icon */
+
+.service-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Card heading */
+
+.service-card h3 {
+    color: #294C68;
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Card paragraph */
+
+.service-card p {
+    color: #444;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* Hover effect */
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+    border-color: #76D6B5;
 }
