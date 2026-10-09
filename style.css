@@ -368,130 +368,217 @@ table input {
         padding: 15px;
     }
 }/* ========================= */
-/* PROMOTIONAL BANNER */
-/* ========================= */
+
+/* =========================
+   PROMOTIONAL BANNER
+========================= */
 
 .promo-banner {
+    position: relative;
     width: 100%;
-    min-height: 230px;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    margin: 0 0 30px;
+    overflow: hidden;
 
     background: linear-gradient(
-        120deg,
-        #5146e5,
-        #7b3ff2,
-        #9b3df5
+        115deg,
+        #4938ee 0%,
+        #7534f4 55%,
+        #a12cf4 100%
     );
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 35px 20px;
-    margin: 0 0 30px 0;
-
-    position: relative;
-    overflow: hidden;
 }
 
-
-/* Decorative circle */
-
-.promo-banner::before {
-    content: "";
-    position: absolute;
-
-    width: 150px;
-    height: 150px;
-
-    border: 2px solid rgba(255,255,255,0.25);
-    border-radius: 50%;
-
-    left: 5%;
-    top: 20px;
-}
-
-
-/* Another decorative circle */
-
+/* Remove decorative circles */
+.promo-banner::before,
 .promo-banner::after {
-    content: "";
-    position: absolute;
-
-    width: 100px;
-    height: 100px;
-
-    background-color: rgba(255,255,255,0.12);
-    border-radius: 50%;
-
-    right: 5%;
-    top: 40px;
+    content: none;
+    display: none;
 }
 
-
-/* Banner content */
-
+/* Center text */
 .promo-content {
     position: relative;
     z-index: 2;
-
+    width: 48%;
+    margin: 0 auto;
+    text-align: center;
     color: white;
 }
-
-
-/* Small heading */
 
 .promo-small {
-    font-size: 17px;
+    margin: 0 0 18px;
+    font-size: 20px;
     font-weight: bold;
-
-    margin: 0 0 10px 0;
+    color: white;
 }
-
-
-/* Main heading */
 
 .promo-content h2 {
-    font-size: 34px;
-
-    margin: 5px 0 10px 0;
-
+    margin: 0 0 18px;
+    font-size: clamp(36px, 3.5vw, 54px);
+    line-height: 1.15;
     color: white;
 }
-
-
-/* Description */
 
 .promo-text {
-    font-size: 18px;
-
-    margin: 0 0 20px 0;
-
+    margin: 0 0 30px;
+    font-size: 19px;
+    line-height: 1.6;
     color: white;
 }
 
-
 /* Register button */
-
 .shop-btn {
     display: inline-block;
-
-    background-color: white;
+    padding: 15px 30px;
+    background: white;
     color: #6941e8;
-
-    padding: 12px 28px;
-
-    border-radius: 6px;
-
+    border-radius: 8px;
     text-decoration: none;
-
+    font-size: 18px;
     font-weight: bold;
-
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
+.shop-btn span {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
 
+.shop-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.shop-btn:hover span {
+    transform: translateX(6px);
+}
+
+/* Student images */
+.hero-img {
+    position: absolute;
+    bottom: 0;
+    width: 27%;
+    max-width: 420px;
+    height: auto;
+    z-index: 1;
+    display: block;
+    pointer-events: none;
+}
+
+/* Boy at far left */
+.left-img {
+    left: 0;
+}
+
+/* Girl at far right */
+.right-img {
+    right: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .promo-banner {
+        min-height: 580px;
+    }
+
+    .hero-img {
+        width: 25%;
+    }
+
+    .promo-content {
+        width: 54%;
+    }
+
+    .promo-content h2 {
+        font-size: 36px;
+    }
+
+    .promo-text {
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .promo-banner {
+        min-height: 650px;
+        padding: 45px 15px 210px;
+        align-items: flex-start;
+        box-sizing: border-box;
+    }
+
+    .promo-content {
+        width: 100%;
+    }
+
+    .promo-small {
+        font-size: 16px;
+    }
+
+    .promo-content h2 {
+        font-size: 30px;
+    }
+
+    .promo-text {
+        font-size: 15px;
+    }
+
+    .shop-btn {
+        padding: 13px 22px;
+        font-size: 16px;
+    }
+
+    .hero-img {
+        width: 42%;
+        max-width: none;
+    }
+
+    .left-img {
+        left: 20px;
+    }
+
+    .right-img {
+        right: 20px;
+    }
+}
+/* Small heading */
+.promo-small  {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 18px ;
+    color: white;
+}
+/* Main heading */
+.promo-content h2 {
+    font-size: clamp(36px, 3.5vw, 54px);
+    margin: 0 0 18px;
+    color: white;
+    line-height: 1.15;
+}
+/* Description */
+.promo-text {
+    font-size: 19px;
+    margin: 0px 0 30px;
+    color: white;
+    line-height: 1.6;
+}
+/* Register button */
+.shop-btn {
+    display: inline-block;
+    background-color: white;
+    color: #6941e8;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
 /* Arrow */
 
 .shop-btn span {
